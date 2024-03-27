@@ -11,6 +11,8 @@ private:
     unsigned int width;
     unsigned int height;
 
+    unsigned int getArea() const;
+
 public:
     Size();
     Size(unsigned int width, unsigned int height);
@@ -19,8 +21,6 @@ public:
     unsigned int getHeight();
     void setWidth(unsigned int width);
     void setHeight(unsigned int height);
-
-    unsigned int getArea() const;
 
     bool operator==(const Size& other) const;
     bool operator<=(const Size& other) const;

@@ -1,0 +1,16 @@
+# ninja log v5
+0	269	1711546106086070426	CMakeFiles/Image_processing_library.dir/Size.cpp.o	de034546adfd80da
+1	270	1711546106086070259	CMakeFiles/Image_processing_library.dir/Point.cpp.o	86072c8469f6d28a
+1	697	1711546106512227609	CMakeFiles/Image_processing_library.dir/test.cpp.o	daa7a8b6212f2d6
+698	784	1711546106602887840	Image_processing_library	7c5901327382224d
+4	565	1711546125855000035	CMakeFiles/Image_processing_library.dir/test.cpp.o	daa7a8b6212f2d6
+565	636	1711546125930270876	Image_processing_library	7c5901327382224d
+3	266	1711546279753997844	CMakeFiles/Image_processing_library.dir/Size.cpp.o	de034546adfd80da
+5	654	1711546280139383899	CMakeFiles/Image_processing_library.dir/test.cpp.o	daa7a8b6212f2d6
+654	737	1711546280227341942	Image_processing_library	7c5901327382224d
+9	575	1711546319753999804	CMakeFiles/Image_processing_library.dir/test.cpp.o	daa7a8b6212f2d6
+575	643	1711546319826728412	Image_processing_library	7c5901327382224d
+4	675	1711546533306703268	CMakeFiles/Image_processing_library.dir/test.cpp.o	daa7a8b6212f2d6
+675	753	1711546533389257807	Image_processing_library	7c5901327382224d
+4	671	1711546631672138506	CMakeFiles/Image_processing_library.dir/test.cpp.o	daa7a8b6212f2d6
+671	754	1711546631759449035	Image_processing_library	7c5901327382224d
