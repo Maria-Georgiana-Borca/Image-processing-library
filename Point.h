@@ -13,11 +13,21 @@ private:
 
 public:
     Point();
+
     Point(int x, int y);
 
-    int getX();
-    int getY();
+    Point(const Point& other);
+
+    ~Point();
+
+    Point& operator=(const Point& other);
+
+    int getX() const;
+
+    int getY() const;
+
     void setX(int new_x);
+
     void setY(int new_y);
 };
 

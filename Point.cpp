@@ -14,11 +14,24 @@ Point::Point(int x, int y) {
     this->y = y;
 }
 
-int Point::getX() {
+Point::Point(const Point &other) {
+    this->x = other.x;
+    this->y = other.y;
+}
+
+Point::~Point() {}
+
+Point& Point::operator=(const Point &other) {
+    this->x = other.x;
+    this->y = other.y;
+    return *this;
+}
+
+int Point::getX() const {
     return this->x;
 }
 
-int Point::getY() {
+int Point::getY() const {
     return this->y;
 }
 
