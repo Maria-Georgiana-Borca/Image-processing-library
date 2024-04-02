@@ -7,4 +7,4 @@ include_directories(.)
 
 add_executable(Image_processing_library
         Size.cpp
-        Size.h Point.h Point.cpp test.cpp)
+        Size.h Point.h Point.cpp test.cpp Rectangle.h Rectangle.cpp)

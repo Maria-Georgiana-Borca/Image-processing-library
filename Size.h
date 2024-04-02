@@ -15,19 +15,34 @@ private:
 
 public:
     Size();
+
     Size(unsigned int width, unsigned int height);
 
-    unsigned int getWidth();
-    unsigned int getHeight();
+    Size(const Size &other);
+
+    ~Size();
+
+    Size& operator=(const Size &other);
+
+    unsigned int getWidth() const;
+
+    unsigned int getHeight() const;
+
     void setWidth(unsigned int width);
+
     void setHeight(unsigned int height);
 
-    bool operator==(const Size& other) const;
-    bool operator<=(const Size& other) const;
-    bool operator<(const Size& other) const;
-    bool operator>(const Size& other) const;
-    bool operator>=(const Size& other) const;
-    bool operator!=(const Size& other) const;
+    bool operator==(const Size &other) const;
+
+    bool operator<=(const Size &other) const;
+
+    bool operator<(const Size &other) const;
+
+    bool operator>(const Size &other) const;
+
+    bool operator>=(const Size &other) const;
+
+    bool operator!=(const Size &other) const;
 };
 
 

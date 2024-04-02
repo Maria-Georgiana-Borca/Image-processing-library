@@ -67,6 +67,13 @@ build CMakeFiles/Image_processing_library.dir/test.cpp.o: CXX_COMPILER__Image_pr
   OBJECT_DIR = CMakeFiles/Image_processing_library.dir
   OBJECT_FILE_DIR = CMakeFiles/Image_processing_library.dir
 
+build CMakeFiles/Image_processing_library.dir/Rectangle.cpp.o: CXX_COMPILER__Image_processing_library_Debug /Users/mariaborca/Documents/GitHub/Image-processing-library/Rectangle.cpp || cmake_object_order_depends_target_Image_processing_library
+  DEP_FILE = CMakeFiles/Image_processing_library.dir/Rectangle.cpp.o.d
+  FLAGS = -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++14
+  INCLUDES = -I/Users/mariaborca/Documents/GitHub/Image-processing-library/.
+  OBJECT_DIR = CMakeFiles/Image_processing_library.dir
+  OBJECT_FILE_DIR = CMakeFiles/Image_processing_library.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Image_processing_library
@@ -75,7 +82,7 @@ build CMakeFiles/Image_processing_library.dir/test.cpp.o: CXX_COMPILER__Image_pr
 #############################################
 # Link the executable Image_processing_library
 
-build Image_processing_library: CXX_EXECUTABLE_LINKER__Image_processing_library_Debug CMakeFiles/Image_processing_library.dir/Size.cpp.o CMakeFiles/Image_processing_library.dir/Point.cpp.o CMakeFiles/Image_processing_library.dir/test.cpp.o
+build Image_processing_library: CXX_EXECUTABLE_LINKER__Image_processing_library_Debug CMakeFiles/Image_processing_library.dir/Size.cpp.o CMakeFiles/Image_processing_library.dir/Point.cpp.o CMakeFiles/Image_processing_library.dir/test.cpp.o CMakeFiles/Image_processing_library.dir/Rectangle.cpp.o
   FLAGS = -g -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/Image_processing_library.dir
   POST_BUILD = :
