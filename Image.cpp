@@ -16,7 +16,7 @@ Image::Image(unsigned int w, unsigned int h) {
     this->m_data = new unsigned char *[h];
     for (int i = 0; i < h; i++) {
         this->m_data[i] = new unsigned char[w];
-        std::memset(m_data[i], '0', w * sizeof(unsigned char));
+        std::memset(m_data[i], 0, w * sizeof(unsigned char));
     }
 }
 

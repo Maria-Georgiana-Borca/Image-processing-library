@@ -3,6 +3,7 @@
 //
 
 #include "ImageProcessing.h"
+#include "drawing.h"
 
 std::ostream &operator<<(std::ostream &os, const Image &dt){
     os << "P2\n";
@@ -39,14 +40,11 @@ int nothing(int x){
 }
 
 int main(){
-    Image image1;
-    Image kernel;
-    std::cin>>image1;
-    std::cin >> kernel;
-    Image image2;
-    Convolution c(kernel, meanBlur);
-    c.process(image1, image2);
-    std::cout << image2;
+    Image image1(5, 5);
+    Point p1(0, 1);
+    Point p2(3, 4);
+    drawRectangle(image1, p1, p2, 2);
+    std::cout << image1;
     return 0;
 }
 
