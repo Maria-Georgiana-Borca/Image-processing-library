@@ -1,9 +1,10 @@
 # ninja log v5
-4	653	1712074143700335069	CMakeFiles/Image_processing_library.dir/main.cpp.o	6981f95540785d02
+4	774	1712153396791417210	CMakeFiles/Image_processing_library.dir/main.cpp.o	6981f95540785d02
 4	618	1712055586577622940	CMakeFiles/Image_processing_library.dir/Rectangle.cpp.o	2dc79d2f68c11162
-662	732	1712074143784700756	Image_processing_library	cf38eaf921a21280
+633	706	1712153485294771789	Image_processing_library	93e877179730eaae
 4	601	1712055630061347877	CMakeFiles/Image_processing_library.dir/test.cpp.o	daa7a8b6212f2d6
 5	9754	1712054630577263903	CMakeFiles/Image_processing_library.dir/Size.cpp.o	de034546adfd80da
 6	9755	1712054630576819319	CMakeFiles/Image_processing_library.dir/Point.cpp.o	86072c8469f6d28a
-4	662	1712074143711083454	CMakeFiles/Image_processing_library.dir/Image.cpp.o	f912faf37070aae9
-0	119	1712074366661188742	build.ninja	2605627a206be8f3
+4	792	1712075931100270055	CMakeFiles/Image_processing_library.dir/Image.cpp.o	f912faf37070aae9
+0	119	1712153659888428584	build.ninja	2605627a206be8f3
+4	632	1712153485216040917	CMakeFiles/Image_processing_library.dir/ImageProcessing.cpp.o	1c9639d5ba26c9c2

@@ -2,7 +2,7 @@
 // Created by Maria Borca on 02.04.2024.
 //
 
-#include "Image.h"
+#include "ImageProcessing.h"
 
 std::ostream &operator<<(std::ostream &os, const Image &dt){
     os << "P2\n";
@@ -30,13 +30,23 @@ std::istream &operator>>(std::istream &is, Image &dt){
     return is;
 }
 
+int meanBlur(int x){
+    return x * 1/9;
+}
+
+int nothing(int x){
+    return x;
+}
+
 int main(){
     Image image1;
+    Image kernel;
     std::cin>>image1;
-    Image roi;
-    Rectangle roiR(1, 1, 2, 2);
-    if (image1.getROI(roi, roiR))
-        std::cout << roi;
+    std::cin >> kernel;
+    Image image2;
+    Convolution c(kernel, meanBlur);
+    c.process(image1, image2);
+    std::cout << image2;
     return 0;
 }
 
