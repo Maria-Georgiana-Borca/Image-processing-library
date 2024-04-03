@@ -195,8 +195,7 @@ Image Image::operator*(double s) {
 
 bool Image::getROI(Image &roiImg, Rectangle roiRect) {
     if (roiRect.GetXCoord() + roiRect.GetWidth() > this->m_width ||
-        roiRect.GetYCoord() + roiRect.GetHeight() > this->m_height ||
-        roiRect.GetXCoord() > this->m_width || roiRect.GetYCoord() > this->m_height)
+        roiRect.GetYCoord() + roiRect.GetHeight() > this->m_height)
         return false;
     roiImg.m_width = roiRect.GetWidth();
     roiImg.m_height = roiRect.GetHeight();
@@ -206,13 +205,13 @@ bool Image::getROI(Image &roiImg, Rectangle roiRect) {
     for (int i = 0; i < roiImg.m_height; i++) {
         roiImg.m_data[i] = new unsigned char[roiImg.m_width];
         for (int j = 0; j < roiImg.m_width; j++)
-            roiImg.m_data[i][j] = this->m_data[i + roiRect.GetYCoord()][j + roiRect.GetXCoord()];
+            roiImg.m_data[i][j] = int(this->m_data[i + roiRect.GetXCoord()][j + roiRect.GetYCoord()]);
     }
     return true;
 }
 
 bool Image::getROI(Image &roiImg, unsigned int x, unsigned int y, unsigned int width, unsigned int height) {
-    if (x + width - 1 > this->m_width || y + this->m_height - 1 > this->m_height || x > this->m_width || y > this->m_height)
+    if (x + width - 1 > this->m_width || y + height - 1 > this->m_height)
         return false;
     roiImg.m_width = width;
     roiImg.m_height = height;
@@ -221,8 +220,9 @@ bool Image::getROI(Image &roiImg, unsigned int x, unsigned int y, unsigned int w
     roiImg.m_data = new unsigned char *[roiImg.m_height];
     for (int i = 0; i < roiImg.m_height; i++) {
         roiImg.m_data[i] = new unsigned char[roiImg.m_width];
-        for (int j = 0; j < roiImg.m_width; j++)
-            roiImg.m_data[i][j] = this->m_data[i + y][j + x];
+        for (int j = 0; j < roiImg.m_width; j++) {
+            roiImg.m_data[i][j] = int(this->m_data[i + x][j + y]);
+        }
     }
     return true;
 }
