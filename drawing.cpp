@@ -16,7 +16,7 @@ void drawLine(Image &img, Point p1, Point p2, unsigned char color) {
         std::swap(p1, p2);
     else if (p1.getX() == p2.getX() && p1.getY() > p2.getY())
         std::swap(p1, p2);
-    for (unsigned int x = p1.getX(), y = p1.getY(); x <= p2.getX(), y <= p2.getY(); x++, y++)
+    for (unsigned int x = p1.getX(), y = p1.getY(); x <= p2.getX() && y <= p2.getY(); x++, y++)
         img.at(x, y) = color;
 }
 
@@ -30,5 +30,4 @@ void drawRectangle(Image &img, Point tl, Point br, unsigned char color) {
     for (int x = tl.getX(); x <= br.getX(); x++)
         for (int y = tl.getY(); y <= br.getY(); y++)
             img.at(x, y) = color;
-
 }
