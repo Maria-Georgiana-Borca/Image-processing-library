@@ -1,7 +1,3 @@
-//
-// Created by Maria Borca on 03.04.2024.
-//
-
 #include "drawing.h"
 
 void drawCircle(Image &img, Point center, int radius, unsigned char color) {

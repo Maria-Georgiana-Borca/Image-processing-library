@@ -1,7 +1,3 @@
-//
-// Created by Maria Borca on 02.04.2024.
-//
-
 #include "ImageProcessing.h"
 #include "drawing.h"
 
@@ -121,6 +117,8 @@ void run() {
             b.process(image, result);
             result.save("photo.pgm");
             image = result;
+            std::cout << "\n\n";
+
         } else if (option == 2) {
             double gama;
             std::cout << "Please introduce the value for gama: ";
@@ -129,6 +127,8 @@ void run() {
             g.process(image, result);
             result.save("photo.pgm");
             image = result;
+            std::cout << "\n\n";
+
         } else if (option == 3) {
             int k = chooseKernel();
             Image kernel(3, 3);
@@ -147,21 +147,27 @@ void run() {
                 Convolution c(kernel, ScaleFunction);
                 c.process(image, result);
             } else if (k == 3) {
-                int ker[4][4] = {{1, 2, 1}, {2, 4, 2}, {1, 2, 1}};
+                int ker[4][4] = {{1, 2, 1},
+                                 {2, 4, 2},
+                                 {1, 2, 1}};
                 for (int i = 0; i < 3; i++)
                     for (int j = 0; j < 3; j++)
                         kernel.at(i, j) = ker[i][j];
                 Convolution c(kernel, ScaleFunction);
                 c.process(image, result);
             } else if (k == 4) {
-                int ker[4][4] = {{1, 2, 1}, {0, 0, 0}, {-1, -2, -1}};
+                int ker[4][4] = {{1,  2,  1},
+                                 {0,  0,  0},
+                                 {-1, -2, -1}};
                 for (int i = 0; i < 3; i++)
                     for (int j = 0; j < 3; j++)
                         kernel.at(i, j) = ker[i][j];
                 Convolution c(kernel, ScaleFunction);
                 c.process(image, result);
             } else {
-                int ker[4][4] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
+                int ker[4][4] = {{-1, 0, 1},
+                                 {-2, 0, 2},
+                                 {-1, 0, 1}};
                 for (int i = 0; i < 3; i++)
                     for (int j = 0; j < 3; j++)
                         kernel.at(i, j) = ker[i][j];
@@ -170,6 +176,8 @@ void run() {
             }
             result.save("photo.pgm");
             image = result;
+            std::cout << "\n\n";
+
         } else if (option == 4) {
             result = image;
             std::cout << "Please introduce the x coordinate for the center for the circle: ";
@@ -188,6 +196,8 @@ void run() {
             drawCircle(result, center, radius, color);
             result.save("photo.pgm");
             image = result;
+            std::cout << "\n\n";
+
         } else if (option == 5) {
             result = image;
 
@@ -207,11 +217,15 @@ void run() {
             int color;
             std::cin >> color;
             drawLine(result, point1, point2, color);
+            std::cout << "\n\n";
+
         } else if (option == 6) {
             result = image;
 
-            std::cout << "Press 1 if you want to give the coordinates of the top-left corner and the width and height of the rectangle\n";
-            std::cout << "Press 2 if you want to give the coordinates of the top-left and right-bottom points of the rectangle\n";
+            std::cout
+                    << "Press 1 if you want to give the coordinates of the top-left corner and the width and height of the rectangle\n";
+            std::cout
+                    << "Press 2 if you want to give the coordinates of the top-left and right-bottom points of the rectangle\n";
             int answer;
             std::cin >> answer;
 
@@ -224,7 +238,7 @@ void run() {
             Point topLeft(x, y);
 
 
-            if (answer == 1){
+            if (answer == 1) {
                 int width, height;
                 std::cout << "Introduce the value for width: ";
                 std::cin >> width;
@@ -237,7 +251,7 @@ void run() {
                 drawRectangle(result, rectangle, color);
                 result.save("photo.pgm");
                 image = result;
-            } else{
+            } else {
                 std::cout << "Please introduce the x coordinate of the right-bottom point: ";
                 std::cin >> x;
                 std::cout << "Please introduce the y coordinate of the right-bottom point: ";
@@ -250,6 +264,8 @@ void run() {
                 result.save("photo.pgm");
                 image = result;
             }
+
+            std::cout << "\n\n";
         }
     }
 }
