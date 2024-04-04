@@ -1,7 +1,3 @@
-//
-// Created by Maria Borca on 03.04.2024.
-//
-
 #ifndef IMAGE_PROCESSING_LIBRARY_DRAWING_H
 #define IMAGE_PROCESSING_LIBRARY_DRAWING_H
 
