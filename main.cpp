@@ -40,7 +40,7 @@ int gaussianScaleFunction(int x) {
 }
 
 int ScaleFunction(int x) {
-    return x % 255;
+    return (x + 4 * 255) % 255;
 }
 
 void printMenu() {

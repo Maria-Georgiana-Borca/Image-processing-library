@@ -30,10 +30,10 @@ GamaCorrector::GamaCorrector(double gama) {
 
 void GamaCorrector::process(const Image &src, Image &dest) {
     for (int i = 0; i < src.GetHeight(); i++) {
-        unsigned char *rowDest = dest.row(i);
+        //unsigned char *rowDest = dest.row(i);
         for (int j = 0; j < src.GetWidth(); j++) {
-            rowDest[j] = pow(int(src.at(i, j)), this->gama);
-            rowDest[j] %= 255;
+            int value = pow(int(src.at(i, j)), this->gama);
+            dest.at(i, j) = value % 255;
         }
     }
 }
@@ -51,8 +51,8 @@ Convolution::Convolution(Image kernel, int (*scaleFunction)(int)) {
 void Convolution::process(const Image &src, Image &dest) {
     Image copySrc(src);
     dest = Image::zeros(src.GetWidth() - kernel.GetWidth() + 1, src.GetHeight() - kernel.GetHeight() + 1);
-    for (unsigned int x = 0; x < src.GetHeight() - this->kernel.GetHeight(); x++){
-        for (int y = 0; y < src.GetWidth() - this->kernel.GetWidth(); y++){
+    for (unsigned int x = 0; x < src.GetHeight() - this->kernel.GetHeight() + 1; x++){
+        for (int y = 0; y < src.GetWidth() - this->kernel.GetWidth() + 1; y++){
             Image aux(this->kernel.GetWidth(), this->kernel.GetHeight());
             copySrc.getROI(aux, x, y, this->kernel.GetWidth(), this->kernel.GetHeight());
             int filteredValue = 0;
@@ -62,5 +62,4 @@ void Convolution::process(const Image &src, Image &dest) {
             dest.at(x, y) = this->scaleFunction(filteredValue);
         }
     }
-
 }
